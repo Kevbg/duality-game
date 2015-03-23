@@ -13,15 +13,15 @@ public class Personagem{
 	private Pixmap pixmap;
 	private Texture texture;
 	private Sprite sprite;
+	private int circleRadius = 15;
 	
 	Personagem(){
-		int circleRadius = 15;
 		
 		batch = new SpriteBatch();
 		pixmap = new Pixmap(WIDTH, HEIGHT, Pixmap.Format.RGBA8888);
 		
 		pixmap.setColor(Color.RED);
-		pixmap.fillCircle(WIDTH/2, (HEIGHT/2 - 1) - circleRadius , circleRadius); // -1 offset;
+		pixmap.fillCircle(WIDTH/2, (HEIGHT/2 - 1) - circleRadius, circleRadius); // -1 offset;
 		
 		texture = new Texture(pixmap);
 		sprite = new Sprite(texture);
@@ -29,5 +29,9 @@ public class Personagem{
 	
 	public Sprite getSprite(){
 		return sprite;
+	}
+	
+	public int getCircleRadius(){
+		return circleRadius;
 	}
 }

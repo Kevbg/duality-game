@@ -20,10 +20,10 @@ public class Cenario {
 		pixmap =  new Pixmap(WIDTH, HEIGHT, Pixmap.Format.RGBA8888);
 		
 		pixmap.setColor(Color.rgba8888(1.0f, 1.0f, 1.0f, 0.5f));
-		pixmap.fillRectangle(100, 0, (WIDTH - 100 * 2), HEIGHT/2);
+		pixmap.fillRectangle(0, 0, (WIDTH), HEIGHT/2);
 		
 		pixmap.setColor(Color.rgba8888(1.0f, 1.0f, 1.0f, 0.2f));
-		pixmap.fillRectangle(100, HEIGHT/2, (WIDTH - 100 * 2), HEIGHT);
+		pixmap.fillRectangle(0, HEIGHT/2, (WIDTH), HEIGHT);
 		
 		texture = new Texture(pixmap);
 		sprite = new Sprite(texture);
